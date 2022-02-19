@@ -1,0 +1,30 @@
+{
+  "name": "prettier_d",
+  "version": "0.1.0",
+  "description": "Speed up prettier by running in the daemon",
+  "bin": "bin/prettier_d.js",
+  "scripts": {
+    "bundle": "rm -rf dist && npm run bin && npm run daemon && npm run service",
+    "pub": "npm publish",
+    "bin": "esbuild --platform=node --bundle src/bin/prettier_d.ts --external:../core_d_service --external:./daemon --outdir=dist/bin",
+    "binWatch": "npm run bin -- --watch",
+    "daemon": "esbuild --platform=node --bundle ./vendor/core_d/daemon --outdir=dist/bin",
+    "daemonWatch": "npm run daemon -- --watch",
+    "service": "esbuild --platform=node --bundle src/core_d_service.ts --outdir=dist",
+    "serviceWatch": "npm run service -- --watch"
+  },
+  "keywords": [
+    "prettier",
+    "prettier_d"
+  ],
+  "files": [
+    "dist"
+  ],
+  "author": "CJ Ting <cjting1128@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "17.0.18",
+    "esbuild": "0.14.23",
+    "prettier": "2.5.1"
+  }
+}
