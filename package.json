@@ -1,8 +1,10 @@
 {
   "name": "@cjting/prettier_d",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Speed up prettier by running in the daemon",
-  "bin": "bin/prettier_d.js",
+  "bin": {
+    "prettier_d": "bin/prettier_d.js"
+  },
   "scripts": {
     "bundle": "rm -rf dist && npm run bin && npm run daemon && npm run service",
     "pub": "npm publish --access public",

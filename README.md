@@ -31,6 +31,6 @@ The daemon statsu file is in `~/.pretter_d`.
 
 ## Change Log
 
-### 0.1.0
+### 0.1.x
 
 First release version.
