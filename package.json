@@ -1,11 +1,11 @@
 {
-  "name": "prettier_d",
+  "name": "@cjting/prettier_d",
   "version": "0.1.0",
   "description": "Speed up prettier by running in the daemon",
   "bin": "bin/prettier_d.js",
   "scripts": {
     "bundle": "rm -rf dist && npm run bin && npm run daemon && npm run service",
-    "pub": "npm publish",
+    "pub": "npm publish --access public",
     "bin": "esbuild --platform=node --bundle src/bin/prettier_d.ts --external:../core_d_service --external:./daemon --outdir=dist/bin",
     "binWatch": "npm run bin -- --watch",
     "daemon": "esbuild --platform=node --bundle ./vendor/core_d/daemon --outdir=dist/bin",

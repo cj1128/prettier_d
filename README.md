@@ -9,7 +9,7 @@ This project is modfied from [prettier_d_slim](https://github.com/mikew/prettier
 ## Install && Usage
 
 ```bash
-$ npm install -g prettier_d
+$ npm install -g @cjting/prettier_d
 # specify a file
 $ prettier_d test.js
 # or use stdin
