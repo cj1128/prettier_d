@@ -7,6 +7,7 @@ export const invoke = (
 ) => {
   const config = prettier.resolveConfig.sync(options.filePath, {
     config: options.configPath,
+    useCache: false,
   })
 
   try {
